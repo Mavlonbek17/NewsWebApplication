@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fox News</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+    <div  class="jumbotron" style="color:black;">
+        <h1 style="color:crimson">   Get The latest news on our website</h1>
+    </div>
+
+    <div class="container">
+        {% for tit, desc,cont, im,ur in mylist %}
+              
+            <h1>Today's News:</h1> {{ tit }}
+            {{ value|linebreaks }}
+            <img src="{{ im }}" alt="">
+            <h4>Article:</h4>{{ desc }}
+            <h5>Content: </h5>{{cont}}
+            {{ value|linebreaks }}
+            <hr syle="width:10px;">
+            <button type="button" class="btn btn-success"><a href="{{ur}}">Read More..</a></button>
+
+        {% endfor %}
+
+
+    </div>
+    
+</body>
+</html>
